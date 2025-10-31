@@ -1,0 +1,20 @@
+{
+  "Ebrahim": {
+    "name": "Ebrahim",
+    "age": 32,
+    "city": "Tehtran",
+    "email": "Ebrahim@mail.com"
+  },
+  "Ali": {
+    "name": "Ali",
+    "age": 30,
+    "city": "Shiraz",
+    "email": "Ali@mail.com"
+  },
+  "Reza": {
+    "name": "Reza",
+    "age": 14,
+    "city": "Shiraz",
+    "email": "Ali@mail.com"
+  }
+}
