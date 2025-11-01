@@ -1,4 +1,4 @@
-from HW2.Notebook import *
+from HW2.HW_02_NOURI_1.Functions import *
 
 check_notebook_file()
 while True:
@@ -18,12 +18,13 @@ while True:
                 show()
             case "3":
                 search()
-            # case "4":
-            #     remove()
-            # case "5":
-            #     exit()
+            case "4":
+                remove()
+            case "5":
+                print("see you later. ;)")
+                break
             case _:
                 pass
 
-    except:
-        break
+    except Exception as e:
+        print(e)
