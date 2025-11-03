@@ -26,6 +26,7 @@ for product in products:
 best_selling_product = max(products, key=lambda pd: pd.quantity)
 average = total_sold / count_of_transactions
 
+print("---گزارش فروش روز---")
 print("تعداد تراکنش ها:", count_of_transactions)
 print("مجموع فروش: %d دلار" % total_sold)
 print("پرفروش ترین کالا: %s (فروش %d عدد)" % (best_selling_product.product_name, best_selling_product.quantity))
