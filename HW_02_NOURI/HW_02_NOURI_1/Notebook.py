@@ -1,4 +1,4 @@
-from HW2.HW_02_NOURI_1.Functions import *
+from HW_02_NOURI.HW_02_NOURI_1.Functions import *
 
 check_notebook_file()
 while True:

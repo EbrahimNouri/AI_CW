@@ -4,7 +4,7 @@ from datetime import datetime
 
 from typing import Final
 
-FILE_PATH: Final = "./HW_02_NOURI_1/Notebook.json"
+FILE_PATH: Final = "./Notebook.json"
 
 
 # my_class.py
