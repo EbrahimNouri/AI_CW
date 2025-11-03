@@ -21,9 +21,9 @@ count_of_prod = 0
 
 for product in products:
     total_sold += product.price * product.quantity
-    count_of_prod += product.quantity# مجموع تعداد کالا
+    count_of_prod += product.quantity
 
-best_selling_product = max(products, key=lambda pd: pd.quantity)  # پرفروش‌ترین کالا
+best_selling_product = max(products, key=lambda pd: pd.quantity)
 average = total_sold / count_of_transactions
 
 print("تعداد تراکنش ها:", count_of_transactions)

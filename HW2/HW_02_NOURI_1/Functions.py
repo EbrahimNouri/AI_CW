@@ -4,13 +4,12 @@ from datetime import datetime
 
 from typing import Final
 
-FILE_PATH: Final = "Notebook.json"
+FILE_PATH: Final = "./HW_02_NOURI_1/Notebook.json"
 
 
 # my_class.py
 class Notebook:
-    def __init__(self, nb_id, title, content, creation_datetime):
-        self.id = nb_id
+    def __init__(self, title, content, creation_datetime):
         self.title = title
         self.content = content
         self.creation_datetime = creation_datetime
@@ -31,19 +30,19 @@ class Notebook:
         """
 
 
-def check_notebook_file()->None:
+def check_notebook_file() -> None:
     if not os.path.exists(FILE_PATH):
         with open(FILE_PATH, 'a') as file:
             file.write("")
 
 
-def add_notebook_entry(notebook)->None:
+def add_notebook_entry(notebook) -> None:
     notebooks = get_notebooks()
     notebooks.append(notebook.to_dict())
     add_all_to_file(notebooks)
 
 
-def add_all_to_file(notebooks)->None:
+def add_all_to_file(notebooks) -> None:
     with open(FILE_PATH, 'w') as file:
         json.dump(notebooks, file, ensure_ascii=False, indent=4)
 
@@ -53,7 +52,7 @@ def get_notebooks() -> list:
         return get_notebooks_from_file()
     else:
         check_notebook_file()
-        return get_notebooks()
+        return []
 
 
 def is_file_exist() -> bool:
@@ -61,9 +60,13 @@ def is_file_exist() -> bool:
 
 
 def get_notebooks_from_file() -> list:
-    with open(FILE_PATH, 'r') as file:
-        notebooks = json.load(file)
-    return notebooks
+    if is_file_exist():
+        with open(FILE_PATH, 'r') as file:
+            notebooks = json.load(file)
+        return notebooks
+    else:
+        check_notebook_file()
+        return []
 
 
 def print_notebook(nb_dict) -> None:
